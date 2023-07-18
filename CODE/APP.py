@@ -14,7 +14,7 @@ import shap
 
 # Load the model :
 model_folder = os.path.join(os.path.dirname(__file__), '..', 'MODEL')
-model_path = os.path.join(model_folder, 'reg_model.pkl')
+model_path = os.path.join(model_folder, 'scoring_model.pkl')
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
