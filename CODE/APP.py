@@ -14,7 +14,8 @@ import shap
 sys.path.append("pre_processing.py")
 from pre_processing import pre_processing
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
-
+import category_encoders as ce
+from category_encoders import TargetEncoder
 
 # Load the model :
 model_folder = os.path.join(os.path.dirname(__file__), '..', 'MODEL')
