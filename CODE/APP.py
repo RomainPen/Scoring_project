@@ -288,8 +288,9 @@ def main():
         
         # Explain the prediction with shapley method :
         st.subheader('Explanation of the prediction')
+        df_p_h = prediction[1]
         explainer = shap.Explainer(model.predict, x_train)
-        shap_values = explainer(pd.DataFrame(feature_dict))
+        shap_values = explainer(df_p_h)
 
         fig, ax = plt.subplots(nrows=1, ncols=1)
         shap.plots.waterfall(shap_values[0], max_display=20)
