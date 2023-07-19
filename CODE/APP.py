@@ -17,6 +17,8 @@ from pre_processing import pre_processing
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 import category_encoders as ce
 from category_encoders import TargetEncoder
+from sklearn.preprocessing import OneHotEncoder
+
 
 # Load the model :
 model_folder = os.path.join(os.path.dirname(__file__), '..', 'model')
@@ -132,12 +134,6 @@ def main():
         time = now.strftime("%H:%M:%S")
         st.write("Heure à Paris : ",time)
         
-        # Features params :
-        #number_input
-        #text_input
-        #checkbox, ex : seaview = 1 if st.checkbox("seaview") else 0 
-        #radio
-        #slider
         
         CUSTOMER_AGE = st.text_input("Customer Age (number)", "30")
         CUSTOMER_GENDER = st.radio("Customer Gender", ('male', 'female'))
