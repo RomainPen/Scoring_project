@@ -18,7 +18,7 @@ import category_encoders as ce
 from category_encoders import TargetEncoder
 
 # Load the model :
-model_folder = os.path.join(os.path.dirname(__file__), '..', 'MODEL')
+model_folder = os.path.join(os.path.dirname(__file__), '..', 'model')
 model_path = os.path.join(model_folder, 'scoring_model.pkl')
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
@@ -32,7 +32,7 @@ with open(df_path, 'r') as file:
 
 
 # Load the image : 
-image_folder = os.path.join(os.path.dirname(__file__), '..', 'PPT_and_report')
+image_folder = os.path.join(os.path.dirname(__file__), '..', 'PPT_et_report')
 image_path = os.path.join(image_folder, 'customer_churn3.webp')
 image = Image.open(image_path) 
 
