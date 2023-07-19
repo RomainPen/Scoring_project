@@ -188,12 +188,12 @@ def main():
         INC_PROP_SMS_CALLS_M1 = st.slider("INC PROP SMS CALLS M1", 0, 50) 
 
         
-        INC_PROP_OPE1__MIN_M1 = st.slider("INC PROP OPE1__MIN M3", 0, 1, 0.01)
-        INC_PROP_OPE1__MIN_M2 = st.slider("INC PROP OPE1__MIN M2", 0, 1, 0.01)
-        INC_PROP_OPE1__MIN_M3 = st.slider("INC PROP OPE1__MIN M1", 0, 1, 0.01)
+        INC_PROP_OPE1__MIN_M1 = st.slider("INC PROP OPE1 MIN M1", 0, 1, 0.01)
+        INC_PROP_OPE1__MIN_M2 = st.slider("INC PROP OPE1 MIN M2", 0, 1, 0.01)
+        INC_PROP_OPE1__MIN_M3 = st.slider("INC PROP OPE1 MIN M3", 0, 1, 0.01)
         
-        INC_PROP_OPE2_MIN_M1 = st.slider("INC PROP OPE2_MIN M1", 0, 1, 0.01)
-        INC_PROP_OPE2_MIN_M2 = st.slider("INC PROP OPE2_MIN M2", 0, 1, 0.01)
+        INC_PROP_OPE2_MIN_M1 = st.slider("INC PROP OPE2 MIN M1", 0, 1, 0.01)
+        INC_PROP_OPE2_MIN_M2 = st.slider("INC PROP OPE2 MIN M2", 0, 1, 0.01)
         INC_PROP_OPE2_MIN_M3 = st.slider("INC PROP OPE2 MIN M3", 0, 1, 0.01)
         
         INC_PROP_FIXED_MIN_M1 = st.slider("INC PROP FIXED MIN M1", 0, 1, 0.01)
