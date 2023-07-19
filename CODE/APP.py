@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 import matplotlib.pyplot as plt
 import pickle
+import joblib
 import os
 import sys
 import xgboost
@@ -21,7 +22,7 @@ from category_encoders import TargetEncoder
 model_folder = os.path.join(os.path.dirname(__file__), '..', 'model')
 model_path = os.path.join(model_folder, 'scoring_model.pkl')
 with open(model_path, 'rb') as file:
-    model = pickle.load(file)
+    model = joblib.load(file) # or 
 
 
 # import x_train for shapley value :
