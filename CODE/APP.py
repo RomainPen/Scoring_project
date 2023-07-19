@@ -22,7 +22,7 @@ from category_encoders import TargetEncoder
 model_folder = os.path.join(os.path.dirname(__file__), '..', 'model')
 model_path = os.path.join(model_folder, 'scoring_model.pkl')
 with open(model_path, 'rb') as file:
-    model = joblib.load(file) # or 
+    model = joblib.load(file) # or pickle.load(file)
 
 
 # import x_train for shapley value :
@@ -33,7 +33,7 @@ with open(df_path, 'r') as file:
 
 
 # Load the image : 
-image_folder = os.path.join(os.path.dirname(__file__), '..', 'PPT_et_report')
+image_folder = os.path.join(os.path.dirname(__file__), '..', 'PPT_et_rapport')
 image_path = os.path.join(image_folder, 'customer_churn3.webp')
 image = Image.open(image_path) 
 
