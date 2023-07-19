@@ -121,7 +121,7 @@ def predict_churner(feature_dict) :
     df_for_pred = df_for_pred[model.get_booster().feature_names]
 
     return {"Churner" : (model.predict(df_for_pred))[0],
-            "Proba 0 (Not churner)": [round(elem, 2) for elem in list(model.predict_proba(df_for_pred)[0])][0],
+            "Proba 0 (No churner)": [round(elem, 2) for elem in list(model.predict_proba(df_for_pred)[0])][0],
             "Proba 1 (Churner)": [round(elem, 2) for elem in list(model.predict_proba(df_for_pred)[0])][1]
            } , df_for_pred
 
@@ -283,7 +283,7 @@ def main():
         # Print the prediction :
         col1, col2, col3 = st.columns(3)
         col1.metric(label = "Churner", value = prediction[0]["Churner"])
-        col2.metric(label = "Proba 0 (Not churner)", value = "{:.3f}".format(prediction[0]["Proba 0 (Not churner)"]))
+        col2.metric(label = "Proba 0 (No churner)", value = "{:.3f}".format(prediction[0]["Proba 0 (No churner)"]))
         col3.metric(label = "Proba 1 (Churner)", value = "{:.3f}".format(prediction[0]["Proba 1 (Churner)"]))
         
         # Explain the prediction with shapley method :
