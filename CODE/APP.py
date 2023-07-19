@@ -188,17 +188,17 @@ def main():
         INC_PROP_SMS_CALLS_M1 = st.slider("INC PROP SMS CALLS M1", 0, 50) 
 
         
-        INC_PROP_OPE1__MIN_M1 = st.slider("INC PROP OPE1 MIN M1", 0, 1, 0.01)
-        INC_PROP_OPE1__MIN_M2 = st.slider("INC PROP OPE1 MIN M2", 0, 1, 0.01)
-        INC_PROP_OPE1__MIN_M3 = st.slider("INC PROP OPE1 MIN M3", 0, 1, 0.01)
+        INC_PROP_OPE1__MIN_M1 = st.slider(label="INC PROP OPE1 MIN M1", min_value=0, max_value=1, step=0.01)
+        INC_PROP_OPE1__MIN_M2 = st.slider(label="INC PROP OPE1 MIN M2", min_value=0, max_value=1, step=0.01)
+        INC_PROP_OPE1__MIN_M3 = st.slider(label="INC PROP OPE1 MIN M3", min_value=0, max_value=1, step=0.01)
         
-        INC_PROP_OPE2_MIN_M1 = st.slider("INC PROP OPE2 MIN M1", 0, 1, 0.01)
-        INC_PROP_OPE2_MIN_M2 = st.slider("INC PROP OPE2 MIN M2", 0, 1, 0.01)
-        INC_PROP_OPE2_MIN_M3 = st.slider("INC PROP OPE2 MIN M3", 0, 1, 0.01)
+        INC_PROP_OPE2_MIN_M1 = st.slider(label="INC PROP OPE2 MIN M1", min_value=0, max_value=1, step=0.01)
+        INC_PROP_OPE2_MIN_M2 = st.slider(label="INC PROP OPE2 MIN M2", min_value=0, max_value=1, step=0.01)
+        INC_PROP_OPE2_MIN_M3 = st.slider(label="INC PROP OPE2 MIN M3", min_value=0, max_value=1, step=0.01)
         
-        INC_PROP_FIXED_MIN_M1 = st.slider("INC PROP FIXED MIN M1", 0, 1, 0.01)
-        INC_PROP_FIXED_MIN_M2 = st.slider("INC PROP FIXED MIN M2", 0, 1, 0.01)
-        INC_PROP_FIXED_MIN_M3 = st.slider("INC PROP FIXED MIN M3", 0, 1, 0.01)
+        INC_PROP_FIXED_MIN_M1 = st.slider(label="INC PROP FIXED MIN M1", min_value=0, max_value=1, step=0.01)
+        INC_PROP_FIXED_MIN_M2 = st.slider(label="INC PROP FIXED MIN M2", min_value=0, max_value=1, step=0.01)
+        INC_PROP_FIXED_MIN_M3 = st.slider(label="INC PROP FIXED MIN M3", min_value=0, max_value=1, step=0.01)
         
         OUT_DURATION_MINS_M1 = st.slider("OUT DURATION MINS M1", 0, 3000)
         OUT_DURATION_MINS_M2 = st.slider("OUT DURATION MINS M2", 0, 3000)
@@ -224,17 +224,17 @@ def main():
         OUT_PROP_SMS_CALLS_M2 = st.slider("OUT_PROP_SMS_CALLS_M2", 0, 200)
         OUT_PROP_SMS_CALLS_M3 = st.slider("OUT_PROP_SMS_CALLS_M3", 0, 200)
         
-        OUT_PROP_OPE1__MIN_M1 = st.slider("OUT_PROP_OPE1__MIN_M1", 0, 1, 0.01)
-        OUT_PROP_OPE1__MIN_M2 = st.slider("OUT_PROP_OPE1__MIN_M2", 0, 1, 0.01)
-        OUT_PROP_OPE1__MIN_M3 = st.slider("OUT_PROP_OPE1__MIN_M3", 0, 1, 0.01)
+        OUT_PROP_OPE1__MIN_M1 = st.slider(label="OUT_PROP_OPE1__MIN_M1", min_value=0, max_value=1, step=0.01)
+        OUT_PROP_OPE1__MIN_M2 = st.slider(label="OUT_PROP_OPE1__MIN_M2", min_value=0, max_value=1, step=0.01)
+        OUT_PROP_OPE1__MIN_M3 = st.slider(label="OUT_PROP_OPE1__MIN_M3", min_value=0, max_value=1, step=0.01)
         
-        OUT_PROP_OPE2_MIN_M1 = st.slider("OUT_PROP_OPE2_MIN_M1", 0, 1, 0.01)
-        OUT_PROP_OPE2_MIN_M2 = st.slider("OUT_PROP_OPE2_MIN_M2", 0, 1, 0.01)
-        OUT_PROP_OPE2_MIN_M3 = st.slider("OUT_PROP_OPE2_MIN_M3", 0, 1, 0.01)
+        OUT_PROP_OPE2_MIN_M1 = st.slider(label="OUT_PROP_OPE2_MIN_M1", min_value=0, max_value=1, step=0.01)
+        OUT_PROP_OPE2_MIN_M2 = st.slider(label="OUT_PROP_OPE2_MIN_M2", min_value=0, max_value=1, step=0.01)
+        OUT_PROP_OPE2_MIN_M3 = st.slider(label="OUT_PROP_OPE2_MIN_M3", min_value=0, max_value=1, step=0.01)
         
-        OUT_PROP_FIXED_MIN_M1 = st.slider("OUT_PROP_FIXED_MIN_M1", 0, 1, 0.01)
-        OUT_PROP_FIXED_MIN_M2 = st.slider("OUT_PROP_FIXED_MIN_M2", 0, 1, 0.01)
-        OUT_PROP_FIXED_MIN_M3 = st.slider("OUT_PROP_FIXED_MIN_M3", 0, 1, 0.01)
+        OUT_PROP_FIXED_MIN_M1 = st.slider(label="OUT_PROP_FIXED_MIN_M1", min_value=0, max_value=1, step=0.01)
+        OUT_PROP_FIXED_MIN_M2 = st.slider(label="OUT_PROP_FIXED_MIN_M2", min_value=0, max_value=1, step=0.01)
+        OUT_PROP_FIXED_MIN_M3 = st.slider(label="OUT_PROP_FIXED_MIN_M3", min_value=0, max_value=1, step=0.01)
         
         INC_OUT_PROP_DUR_MIN_M1 = st.slider("INC_OUT_PROP_DUR_MIN_M1", 0, 3000)
         INC_OUT_PROP_DUR_MIN_M2 = st.slider("INC_OUT_PROP_DUR_MIN_M2", 0, 3000)
