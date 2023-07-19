@@ -129,7 +129,7 @@ def predict_churner(feature_dict) :
 # Main function :
 def main():
     # Title :
-    st.title('Who are the customers churners ? :graphic:')
+    st.title('Who are the customers churners ? :chart_with_upwards_trend:')
     
     # Image :
     st.image(image, caption='Customer churner')
