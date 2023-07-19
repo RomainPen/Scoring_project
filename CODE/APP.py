@@ -170,8 +170,8 @@ def main():
         PASS_GRACE_IND_M1 = 1 if st.checkbox("PASS GRACE IND M1") else 0
         
         PASS_AFTERGRACE_IND_M3 = 1 if st.checkbox("PASS AFTERGRACE IND M3") else 0
-        PASS_AFTERGRACE_IND_M2 = 1 if st.checkbox("PASS AFTERGRACE IND M3") else 0
-        PASS_AFTERGRACE_IND_M1 = 1 if st.checkbox("PASS AFTERGRACE IND M3") else 0
+        PASS_AFTERGRACE_IND_M2 = 1 if st.checkbox("PASS AFTERGRACE IND M2") else 0
+        PASS_AFTERGRACE_IND_M1 = 1 if st.checkbox("PASS AFTERGRACE IND M1") else 0
         
         DATA_FLAG = 1 if st.checkbox("DATA FLAG") else 0
         INT_FLAG = 1 if st.checkbox("INT FLAG") else 0
