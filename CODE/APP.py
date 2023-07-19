@@ -29,9 +29,9 @@ with open(model_path, 'rb') as file:
 
 # import x_train for shapley value :
 df_folder = os.path.join(os.path.dirname(__file__), '..', 'DATA')
-df_path = os.path.join(df_folder, 'x_train.csv')
+df_path = os.path.join(df_folder, 'df_train.csv')
 with open(df_path, 'r') as file:
-    x_train = pd.read_csv(file, sep=";")
+    df_train = pd.read_csv(file, sep=";")
 
 
 # Load the image : 
@@ -41,11 +41,19 @@ image = Image.open(image_path)
 
 
 # Predict price :
+target = "AFTERGRACE_FLAG"
+x_train = df_train.drop([target], axis=1)
+y_train = df_train[target]
+
 list_col_to_drop = ['PASS_AFTERGRACE_IND_M1', 'INC_DURATION_MINS_M1', 'INC_PROP_OPE2_MIN_M3', 'OUT_DURATION_MINS_M1', 'OUT_DURATION_MINS_M3',
                     'OUT_INT_DURATION_MINS_M3', 'OUT_VMACC_NO_CALLS_M1', 'INC_OUT_PROP_DUR_MIN_M1']
-a = pre_processing()
 list_cat_col_OHE = ['CUSTOMER_GENDER']
 list_cat_col_TE =  ['marque']
+
+a = pre_processing()
+x_train = a.pre_processing(df=x_train, train=True, categorical_var_OHE= list_cat_col_OHE,
+                           categorical_var_OrdinalEncoding={}, categorical_var_TE=list_cat_col_TE, target=y_train,
+                           continious_var=[], encoding_type_cont=StandardScaler())
  
 
 def predict_churner(feature_dict) :
@@ -266,7 +274,7 @@ def main():
 
 
     # Predict button :
-    if st.button('Predict the rental price') :
+    if st.button('Predict score') :
         prediction = predict_churner(feature_dict)
         
         # display the dataframe :
