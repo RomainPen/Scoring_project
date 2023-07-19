@@ -283,8 +283,8 @@ def main():
         # Print the prediction :
         col1, col2, col3 = st.columns(3)
         col1.metric(label = "Churner", value = prediction[0]["Churner"])
-        col2.metric(label = "Proba 0 (Not churner)", value = prediction[0]["Proba 0 (Not churner)"])
-        col3.metric(label = "Proba 1 (Churner)", value = prediction[0]["Proba 1 (Churner)"])
+        col2.metric(label = "Proba 0 (Not churner)", value = round(prediction[0]["Proba 0 (Not churner)"], 3))
+        col3.metric(label = "Proba 1 (Churner)", value = round(prediction[0]["Proba 1 (Churner)"], 3))
         
         # Explain the prediction with shapley method :
         st.subheader('Explanation of the prediction')
