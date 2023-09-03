@@ -58,9 +58,8 @@ class pre_processing :
             #categorical var : Ordinal input example -> {"var" : {'c':0,'b':1,'a':2}}
                 for i in range(len(categorical_var_OrdinalEncoding)) :
                     var = list(categorical_var_OrdinalEncoding.keys())[i]
-                    self.enc_ordinal = ce.OrdinalEncoder(cols=[var], return_df=True, mapping=[{'col':var,'mapping':categorical_var_OrdinalEncoding[var]}])
-                    df_pre_processed[var] = self.enc_ordinal.fit_transform(df_pre_processed[var])
-            
+                    df_pre_processed[var] = df_pre_processed[var].replace(categorical_var_OrdinalEncoding[var])
+                
             if len(categorical_var_TE) != 0 :
             #categorical var : Target encoding
                 self.enc_TE = TargetEncoder().fit(df_pre_processed[categorical_var_TE], target)
@@ -87,9 +86,9 @@ class pre_processing :
             if len(categorical_var_OrdinalEncoding) != 0 :
             #categorical var : Ordinal input example -> {"var" : {'c':0,'b':1,'a':2}}
                 for i in range(len(categorical_var_OrdinalEncoding)) :
-                    var = list(categorical_var_OrdinalEncoding.keys())[i]    
-                    df_pre_processed[var] = self.enc_ordinal.transform(df_pre_processed[var])
-             
+                    var = list(categorical_var_OrdinalEncoding.keys())[i]
+                    df_pre_processed[var] = df_pre_processed[var].replace(categorical_var_OrdinalEncoding[var])
+                    
             if len(categorical_var_TE) != 0 :
                 #categorical var : Target Encoding
                 encoded2_TE = self.enc_TE.transform(df_pre_processed[categorical_var_TE])
